@@ -7,3 +7,6 @@ C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson8_BulkCoffeeSales1\Lesson8
 C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\obj\Debug\Lesson8_BulkCoffeeSales1.csproj.GenerateResource.Cache
 C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\obj\Debug\Lesson8_BulkCoffeeSales1.exe
 C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\obj\Debug\Lesson8_BulkCoffeeSales1.pdb
+I:\GITHUB\COMP1004-Lesson11\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\bin\Debug\Lesson8_BulkCoffeeSales1.exe.config
+I:\GITHUB\COMP1004-Lesson11\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\obj\Debug\Lesson8_BulkCoffeeSales1.exe
+I:\GITHUB\COMP1004-Lesson11\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\obj\Debug\Lesson8_BulkCoffeeSales1.pdb
