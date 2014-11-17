@@ -10,3 +10,9 @@ C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson8_BulkCoffeeSales1\Lesson8
 I:\GITHUB\COMP1004-Lesson11\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\bin\Debug\Lesson8_BulkCoffeeSales1.exe.config
 I:\GITHUB\COMP1004-Lesson11\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\obj\Debug\Lesson8_BulkCoffeeSales1.exe
 I:\GITHUB\COMP1004-Lesson11\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\obj\Debug\Lesson8_BulkCoffeeSales1.pdb
+I:\GITHUB\COMP1004-Lesson11\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\bin\Debug\Lesson8_BulkCoffeeSales1.exe
+I:\GITHUB\COMP1004-Lesson11\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\bin\Debug\Lesson8_BulkCoffeeSales1.pdb
+I:\GITHUB\COMP1004-Lesson11\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\obj\Debug\Lesson8_BulkCoffeeSales1.csprojResolveAssemblyReference.cache
+I:\GITHUB\COMP1004-Lesson11\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\obj\Debug\Lesson8_BulkCoffeeSales1.BulkCoffeeSalesForm.resources
+I:\GITHUB\COMP1004-Lesson11\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\obj\Debug\Lesson8_BulkCoffeeSales1.Properties.Resources.resources
+I:\GITHUB\COMP1004-Lesson11\Lesson8_BulkCoffeeSales1\Lesson8_BulkCoffeeSales1\obj\Debug\Lesson8_BulkCoffeeSales1.csproj.GenerateResource.Cache

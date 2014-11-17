@@ -96,7 +96,7 @@
             this.exitButton.TabIndex = 8;
             this.exitButton.Text = "E&xit";
             this.exitButton.UseVisualStyleBackColor = true;
-        
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // printButton
             // 
@@ -106,7 +106,7 @@
             this.printButton.TabIndex = 7;
             this.printButton.Text = "&Print";
             this.printButton.UseVisualStyleBackColor = true;
-          
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
             // clearButton
             // 
@@ -116,7 +116,7 @@
             this.clearButton.TabIndex = 6;
             this.clearButton.Text = "&Clear";
             this.clearButton.UseVisualStyleBackColor = true;
-      
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // findPriceButton
             // 
@@ -126,7 +126,7 @@
             this.findPriceButton.TabIndex = 5;
             this.findPriceButton.Text = "&Find Price";
             this.findPriceButton.UseVisualStyleBackColor = true;
-        
+            this.findPriceButton.Click += new System.EventHandler(this.findPriceButton_Click);
             // 
             // priceTextBox
             // 
@@ -189,7 +189,7 @@
             this.fullPoundRadioButton.TabIndex = 2;
             this.fullPoundRadioButton.Text = "Fu&ll Pound";
             this.fullPoundRadioButton.UseVisualStyleBackColor = true;
-           
+            this.fullPoundRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // halfPoundRadioButton
             // 
@@ -200,7 +200,7 @@
             this.halfPoundRadioButton.TabIndex = 1;
             this.halfPoundRadioButton.Text = "&Half Pound";
             this.halfPoundRadioButton.UseVisualStyleBackColor = true;
-       
+            this.halfPoundRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // quarterPoundRadioButton
             // 
@@ -213,7 +213,7 @@
             this.quarterPoundRadioButton.TabStop = true;
             this.quarterPoundRadioButton.Text = "&Quarter Pound";
             this.quarterPoundRadioButton.UseVisualStyleBackColor = true;
-         
+            this.quarterPoundRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // printPreviewDialog1
             // 
@@ -227,7 +227,7 @@
             // 
             // printDocument1
             // 
-         
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage_1);
             // 
             // BulkCoffeeSalesForm
             // 

@@ -19,35 +19,134 @@ namespace Lesson8_BulkCoffeeSales1
 {
     public partial class BulkCoffeeSalesForm : Form
     {
-      
-           
+
+        private struct CoffeeSale
+        {
+            public string quantityString;
+            public string typeString;
+            public decimal priceDecimal;
+        }
+
+        //number of transaction to be saved
+        private const int MAX_TRANSACTIONS_Integer = 5;
+        //the list/array to save the transactions
+        private CoffeeSale[] transactionsCoffeeSale = new CoffeeSale[MAX_TRANSACTIONS_Integer];
+        private string selectedButtonString = "quarterPoundRadioButton";
+        private int transactionNumberInteger = 0;
+
 
         public BulkCoffeeSalesForm()
         {
             InitializeComponent();
         }
 
-     
-
-      
-
-
-        
-        /*
-        private void printButton_Click(object sender, EventArgs e)
+        private void clearButton_Click(object sender, EventArgs e)
         {
-            //preview the transaction report and print if required
-
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
-            //only if printing is required without previewing
-            //printDocument1.Print();
-
+            //clear the inputs and outputs; bacl to start or default
+            coffeeTypeComboBox.SelectedIndex = -1;
+            quarterPoundRadioButton.Checked = true;
+            selectedButtonString = "quarterPountRadioButton";
+            priceTextBox.Clear();
         }
 
-      
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            //close the application; check if report needs to 
+            DialogResult confirm = MessageBox.Show("Do you want to print the transaction report?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question,MessageBoxDefaultButton.Button1);
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+            if (confirm == System.Windows.Forms.DialogResult.No) { 
+                //call the print procedure
+                printButton_Click(sender, e);
+                //Closes the application
+            }
+
+            this.Close();
+        }
+
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            if (transactionNumberInteger > 0) {
+                //preview the transaction report and print if required
+
+                printPreviewDialog1.Document = printDocument1;
+                printPreviewDialog1.ShowDialog();
+                //only if printing is required without previewing
+                //printDocument1.Print();
+            } else {
+                MessageBox.Show("There's no transactions to print", "Print", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
+        }
+
+        private void findPriceButton_Click(object sender, EventArgs e)
+        {
+            //prices of the bulk coffee
+            decimal[,] priceDecimal = {
+                                          {2.6m,2.9m,3.25m},
+                                          {4.9m,5.6m,6.1m},
+                                          {8.75m,9.75m,11.25m}
+                                      };
+
+            int rowInteger, columnInteger;
+            decimal salesPriceDecimal;
+
+            //allow maximum numbers of transactions
+            if (transactionNumberInteger < MAX_TRANSACTIONS_Integer)
+            {
+                //find coffee selected
+                columnInteger = coffeeTypeComboBox.SelectedIndex;
+                if (columnInteger != -1)
+                {
+                    switch (selectedButtonString)
+                    {
+                        case "quarterPoundRadioButton":
+                            rowInteger = 0;
+                            transactionsCoffeeSale[transactionNumberInteger].quantityString = "Quarter Pound";
+                            break;
+                        case "halfPoundRadioButton":
+                            rowInteger = 1;
+                            transactionsCoffeeSale[transactionNumberInteger].quantityString = "Half Pound";
+                            break;
+                        case "fullPoundRadioButton":
+                            rowInteger = 2;
+                            transactionsCoffeeSale[transactionNumberInteger].quantityString = "Full Pound";
+                            break;
+                        default:
+                            rowInteger = 0;
+                            transactionsCoffeeSale[transactionNumberInteger].quantityString = "Quarter Pound";
+                            break;
+                    }//switch
+
+                    //retrieve the price
+                    salesPriceDecimal = priceDecimal[rowInteger, columnInteger];
+                    //save the rest of the transaction
+                    transactionsCoffeeSale[transactionNumberInteger].typeString = (string) coffeeTypeComboBox.Items[columnInteger];
+                    transactionsCoffeeSale[transactionNumberInteger].priceDecimal = salesPriceDecimal;
+
+                    transactionNumberInteger++;
+
+                    //display the price
+                    priceTextBox.Text = salesPriceDecimal.ToString("c");
+                }
+                else
+                {
+                    MessageBox.Show("Please select a coffee type", "Incomplete selection", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Only this" + MAX_TRANSACTIONS_Integer + " amount of transactions can be made", "Maximum Number of Transactions", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton selectedRadioButton = (RadioButton)sender;
+            selectedButtonString = selectedRadioButton.Name;
+        }
+
+
+        private void printDocument1_PrintPage_1(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             //setting up the print page for preview and print
             Font printFont = new Font("Arial", 12);
@@ -75,6 +174,11 @@ namespace Lesson8_BulkCoffeeSales1
                    500, verticalPrintLocationFloat);
 
                 verticalPrintLocationFloat += lineHeightFloat * 2;
+                
+                /*
+                 * Option2:
+                 * for(CoffeeSale transaction in transactionsCoffeeSales)
+                */
 
                 //print the transactions
                 for (int index = 0; index < transactionNumberInteger; index++)
@@ -101,16 +205,11 @@ namespace Lesson8_BulkCoffeeSales1
 
                 }
             }
-            else
+            /*else
             {
                 MessageBox.Show("No transactions to print", "Print Transactions", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-
-
+            }*/
 
         }
-        */
-
     }
 }
